@@ -9,16 +9,16 @@
 Colors used:
   background-color: #dae0eb
   text-color: #2b2b2b
-  hyperlink color: #57390B
-  visited hyperlink color: blue
-  active hyperlink color: #4B0016
-  mylink id color: #014506
+  hyperlink color: black
+  visited hyperlink color: black
+  active hyperlink color: black
+  mylink id color: #162f57
 Grid:
   background-color: lightgray
 Table:
   Border color: black
   head's background-color: #656362
-  even rows' color: #f2f2f2
+  even rows' color: white
 Animation object colors:
   object1 color: #edc655
   object2 color: #fcffad
@@ -30,41 +30,49 @@ Header and footer colors:
   background color: lightgray
   text color: black
 */
-:root{
-  /*Font*/
-}
+:root {
 
+  /* Font */
+}
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
+
   /* Sets the font size to 16px */
   line-height: 1.6;
+
   /* Sets the line-height to 1.6 */
   background-color: #dae0eb;
   color: #2b2b2b;
 }
+
 input {
   font-family: 'Lato', sans-serif;
+  border-radius: 3px;
 }
-texture {
-  font-family: 'Lato', sans-serif;
-}
+
 select {
   font-family: 'Lato', sans-serif;
+  border-radius: 3px;
 }
+
 button {
   font-family: 'Lato', sans-serif;
+  border-radius: 3px;
 }
-h1{
+
+h1 {
   font-size: 30px;
   font-weight: 700;
 }
+
 h2 {
   font-size: 24px;
   font-weight: 700;
@@ -74,26 +82,31 @@ h3 {
   font-size: 18px;
   font-weight: 700;
 }
+
 a {
-  color: #57390B;
+  color: black;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
 }
+
 a:visited {
   /* visited link */
-  color: blue;
+  color: black;
 }
 
 a:active {
   /* selected link */
-  color: #4B0016;
+  color: black;
 }
-#my-link {/* id selector */
-  color: #014506;
+
+#my-link {
+  color: #162f57;
 }
+
 .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,11 +114,12 @@ a:active {
   width: 100%;
   height: 100px;
   padding: 20px;
-  background-color: lightgray;
+  background-color: #bcbcbc;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+
 .page-header__item {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50px;
@@ -114,22 +128,31 @@ a:active {
       align-content: flex-end;
   width: 50px;
 }
+
 .page-header__item:last-child {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: right;
 }
+
 .navigation-list {
   list-style-type: none;
 }
+
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
 }
+
 .navigation-list__item--active {
   text-decoration: none;
 }
+
+.navigation-list__item {
+  color: black;
+}
+
 .profile {
   width: 80%;
   margin: 0 auto;
@@ -138,6 +161,7 @@ a:active {
   -ms-flex-line-pack: center;
       align-content: center;
 }
+
 .profile__portrait {
   float: left;
   width: 20%;
@@ -145,69 +169,67 @@ a:active {
   margin-bottom: 100px;
   border-radius: 50%;
 }
+
 .about {
   max-width: 100%;
   text-align: justify;
   margin-bottom: 100px;
 }
-.about-picture{
+
+.about-picture {
   float: right;
   width: 50%;
   margin-left: 40px;
 }
+
 table {
   border: 1px solid black;
 }
+
 th {
   border: 1px solid black;
 }
+
 td {
   border: 1px solid black;
 }
+
 table {
   border-collapse: collapse;
 }
-thead{
+
+thead {
   background-color: #656362;
   color: white;
 }
-tr:nth-child(even) {background-color: #f2f2f2;}
-.work, .contact, .about{
+
+tr:nth-child(even) { background-color: white; }
+
+.work,
+.contact,
+.about {
   margin-right: 2%;
   margin-left: 2%;
+  margin-bottom: 100px;
 }
+
 .button {
   /* overwrites browser defaults */
+
   /* resets the border */
   border: none;
   display: inline-block;
+
   /* takes the font from the outer container */
   font-family: inherit;
+
   /* style button */
   background-color: #357b70;
   color: white;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.2s opacity;
-  -o-transition: 0.2s opacity;
-  transition: 0.2s opacity;
-}
-button {
-  /* overwrites browser defaults */
-  /* resets the border */
-  border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* style button */
-  background-color: #357b70;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
+
   /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.2s opacity;
@@ -215,6 +237,29 @@ button {
   transition: 0.2s opacity;
 }
 
+button {
+  /* overwrites browser defaults */
+
+  /* resets the border */
+  border: none;
+  display: inline-block;
+
+  /* takes the font from the outer container */
+  font-family: inherit;
+
+  /* style button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+}
 
 button:hover,
 button:focus,
@@ -222,60 +267,78 @@ button:focus,
 .button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
+
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
 }
+
 /* start grid fallback */
 .grid__item {
+  color: #162f57;
   display: inline-block;
   width: 33%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
+
 @-webkit-keyframes color-change {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
 }
+
 @keyframes color-change {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
 }
+
 .rCloud {
   -webkit-animation: 4s color-change infinite alternate linear;
           animation: 4s color-change infinite alternate linear;
 }
+
 @-webkit-keyframes cloud-move {
   from {
-    -webkit-transform: translate(0, 0px);
-            transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
+
   to {
-    -webkit-transform: translate(200px, 0px);
-            transform: translate(200px, 0px);
+    -webkit-transform: translate(200px, 0);
+            transform: translate(200px, 0);
   }
 }
+
 @keyframes cloud-move {
   from {
-    -webkit-transform: translate(0, 0px);
-            transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
+
   to {
-    -webkit-transform: translate(200px, 0px);
-            transform: translate(200px, 0px);
+    -webkit-transform: translate(200px, 0);
+            transform: translate(200px, 0);
   }
 }
+
 .lCloud {
   -webkit-animation-duration: 30s;
           animation-duration: 30s;
@@ -295,19 +358,21 @@ button:focus,
   .grid {
     display: -ms-grid;
     display: grid;
+
     /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     margin: 0;
-
   }
+
   .grid__item {
-    background-color: lightgray;
+    background-color: #bcbcbc;
     width: auto;
     min-height: auto;
     margin: 0;
   }
+
   .grid__item:last-child {
     -ms-grid-column: 3;
     grid-column: 3 / 3;
@@ -315,31 +380,37 @@ button:focus,
     -ms-grid-row-span: 2;
     grid-row: 1 / 3;
   }
+
   @media all and (max-width: 500px) {
     .grid {
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
     }
   }
-  @media all and (min-width: 500px) and (max-width: 750px){
+
+  @media all and (min-width: 500px) and (max-width: 750px) {
     .grid {
       -ms-grid-columns: 1fr 20px 1fr;
       grid-template-columns: 1fr 1fr;
     }
   }
+
   @media all and (max-width: 750px) {
     .grid {
       grid-gap: 10px;
     }
+
     .grid__item:last-child {
       grid-column: auto / auto;
       grid-row: auto / auto;
     }
+
     h1 {
       font-size: 22px;
     }
   }
 }
+
 @supports (display: block) {
   @media all and (max-width: 800px) {
     .profile__portrait {
@@ -350,40 +421,50 @@ button:focus,
           -ms-flex-align: center;
               align-items: center;
     }
-    .profile{
+
+    .profile {
       text-align: center;
       width: 90%;
     }
+
     h1 {
       font-size: 22px;
     }
   }
+
   @media all and (min-width: 1024px) {
-    .profile{
+    .profile {
       text-align: justify;
       max-width: 1024px;
       font-size: 26px;
     }
-    .page-header{
+
+    .page-header {
       font-size: 22px;
     }
+
     .contact {
       text-align: center;
       font-size: 26px;
     }
-    input, textarea{
+
+    input,
+    textarea {
       max-width: 1024px;
+      border-radius: 3px;
     }
+
     h1 {
       font-size: 40px;
     }
   }
 }
 
-.contact{
+.contact {
   margin-bottom: 100px;
 }
-input[type=text]{
+
+input[type=text] {
   width: 100%;
   padding: 20px;
   border: 1px solid gray;
@@ -391,7 +472,8 @@ input[type=text]{
   margin-bottom: 16px;
   resize: vertical;
 }
-textarea{
+
+textarea {
   width: 100%;
   padding: 20px;
   border: 1px solid gray;
@@ -399,43 +481,53 @@ textarea{
   margin-bottom: 16px;
   resize: vertical;
 }
-input[type=email]{
+
+input[type=email] {
   width: 100%;
   padding: 20px;
   border: 1px solid gray;
   margin-top: 6px;
   margin-bottom: 16px;
 }
-input[type=tel]{
+
+input[type=tel] {
   width: 100%;
   padding: 20px;
   border: 1px solid gray;
   margin-top: 6px;
   margin-bottom: 16px;
 }
-textarea{
+
+textarea {
   height: 300px;
 }
+
 input[type=submit] {
-  background-color: gray;
+  background-color: #bcbcbc;
   color: black;
-  padding: 20px 20px;
+  padding: 20px;
   border: none;
   cursor: pointer;
 }
+
 input[type=submit]:hover {
-  background-color: #BCBCBC;
+  background-color: #bcbcbc;
 }
+
 .contact-form {
-  background-color: #575554;
+  background-color: #656362;
   color: white;
+  text-align: left;
   padding: 20px;
   max-width: 1024px;
   margin: 0 auto;
+  border-radius: 3px;
 }
-.standard-label-tel{
+
+.standard-label-tel {
   margin-right: 0;
 }
+
 .page-footer {
   clear: both;
   display: -webkit-box;
@@ -448,11 +540,12 @@ input[type=submit]:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+
   /* create a fixed footer! */
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: lightgray;
+  background-color: #bcbcbc;
   color: black;
 }
