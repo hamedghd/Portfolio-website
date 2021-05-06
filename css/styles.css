@@ -2,16 +2,16 @@
 Colors used:
   background-color: #dae0eb
   text-color: #2b2b2b
-  hyperlink color: #57390B
-  visited hyperlink color: blue
-  active hyperlink color: #4B0016
-  mylink id color: #014506
+  hyperlink color: black
+  visited hyperlink color: black
+  active hyperlink color: black
+  mylink id color: #162f57
 Grid:
   background-color: lightgray
 Table:
   Border color: black
   head's background-color: #656362
-  even rows' color: #f2f2f2
+  even rows' color: white
 Animation object colors:
   object1 color: #edc655
   object2 color: #fcffad
@@ -27,20 +27,15 @@ Header and footer colors:
   --bg1-color: #dae0eb;
   --bg2-color: #357b70;
   --bg3-color: #656362;
-  --bg4-color: gray;
-  --bg5-color: #bcbcbc;
-  --bg6-color: #575554;
-  --bg7-color: lightgray;
+  --bg4-color: #bcbcbc;
   --txt1-color: #2b2b2b;
   --txt2-color: black;
   --txt3-color: white;
-  --lnk1-color: #57390b;
-  --lnk2-color: #014506;
-  --lnk3-color: blue;
-  --lnk4-color: #4b0016;
+  --lnk1-color: black;
+  --lnk2-color: #162f57;
   --bd1-color: black;
   --bd2-color: gray;
-  --row1-color: #f2f2f2;
+  --row1-color: white;
   --obj1-color: #edc655;
   --obj2-color: #fcffad;
   --obj3-color: #f76414;
@@ -80,6 +75,7 @@ input,
 select,
 button {
   font-family: var(--font-family1);
+  border-radius: 3px;
 }
 
 h1 {
@@ -109,15 +105,15 @@ a:focus {
 
 a:visited {
   /* visited link */
-  color: var(--lnk3-color);
+  color: var(--lnk1-color);
 }
 
 a:active {
   /* selected link */
-  color: var(--lnk4-color);
+  color: var(--lnk1-color);
 }
 
-#my-link {/* id selector */
+#my-link {
   color: var(--lnk2-color);
 }
 
@@ -126,7 +122,7 @@ a:active {
   width: 100%;
   height: 100px;
   padding: 20px;
-  background-color: var(--bg7-color);
+  background-color: var(--bg4-color);
   align-items: center;
 }
 
@@ -152,6 +148,10 @@ a:active {
 
 .navigation-list__item--active {
   text-decoration: none;
+}
+
+.navigation-list__item {
+  color: var(--lnk1-color);
 }
 
 .profile {
@@ -204,6 +204,7 @@ tr:nth-child(even) { background-color: var(--row1-color); }
 .about {
   margin-right: 2%;
   margin-left: 2%;
+  margin-bottom: 100px;
 }
 
 .button,
@@ -242,8 +243,12 @@ button:focus,
 
 /* start grid fallback */
 .grid__item {
+  color: var(--lnk2-color);
   display: inline-block;
   width: 33%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 @keyframes color-change {
@@ -295,7 +300,7 @@ button:focus,
   }
 
   .grid__item {
-    background-color: var(--bg7-color);
+    background-color: var(--bg4-color);
     width: auto;
     min-height: auto;
     margin: 0;
@@ -372,6 +377,7 @@ button:focus,
     input,
     textarea {
       max-width: 1024px;
+      border-radius: 3px;
     }
 
     h1 {
@@ -416,15 +422,17 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: var(--bg5-color);
+  background-color: var(--bg4-color);
 }
 
 .contact-form {
-  background-color: var(--bg6-color);
+  background-color: var(--bg3-color);
   color: var(--txt3-color);
+  text-align: left;
   padding: 20px;
   max-width: 1024px;
   margin: 0 auto;
+  border-radius: 3px;
 }
 
 .standard-label-tel {
@@ -442,6 +450,6 @@ input[type=submit]:hover {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: var(--bg7-color);
+  background-color: var(--bg4-color);
   color: var(--txt2-color);
 }
